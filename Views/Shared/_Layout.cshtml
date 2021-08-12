@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Movie-Rental-Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("my", required: false)
 
 </head>
 <body>
@@ -23,23 +24,52 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Customers", "Customer", "Customers")</li>
                     <li>@Html.ActionLink("Movies", "Random", "Movies")</li>
-                    <li>@Html.ActionLink("Movies", "NewRental", "Rentals")</li>
+                    <li>@Html.ActionLink("Rentals", "NewRental", "Rentals")</li>
 
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content ">
         @RenderBody()
         <hr />
+        <div id="particles-js" style="height: 100%; background-color: black " class="mb-4" ></div>
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
 
     @Scripts.Render("~/bundles/lib")
-
+    @RenderSection("my", required: false)
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
+@section scripts{
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+
+        particlesJS.load("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                }
+            }
+        }, function () { console.log("eeeee") });
+
+        console.log("Hello world");
+    </script>
+
+
+}
+@section my{
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+}
