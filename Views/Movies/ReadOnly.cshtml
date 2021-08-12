@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<MovieApplication.Models.Movie>
+@{
+    ViewBag.Title = "Sphelele Mendu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<table id="movies" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th><h3>Customers</h3></th>
+            <th><h3>Membership Type</h3></th>
+            
+        </tr>
+
+    </thead>
+    <tbody>
+    </tbody>
+
+</table>
+@section scripts
+
+{
+    <script>
+        $(document).ready(function () {
+            var table = $("#movies").DataTable({
+                ajax: {
+                    url: "/api/movies",
+                    dataSrc: ""
+                },
+                columns: [
+                    {
+                        data: "name"
+                        
+                    },
+                    {
+                        data: "genre.name"
+                    }
+                ]
+            });
+            
+        });
+    </script>
+}

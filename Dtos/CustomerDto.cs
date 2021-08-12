@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using MovieApplication.Models;
+using System.ComponentModel.DataAnnotations;
+namespace MovieApplication.Dtos
+{
+    public class CustomerDto
+    {
+        public int Id { get; set; }
+        [Required]
+        [StringLength(255)]
+        public string Name { get; set; }
+        public bool isSubscribedToNewsLetter { get; set; }
+        public MembershipTypeDto membershipType { get; set; }
+
+        public byte membershipTypeId { get; set; }
+        //public MembershipType membershipName { get; set; }
+
+        [Display(Name = "Membership Type")]
+        public int membershipNameId { get; set; }
+        public DateTime? Birthdate { get; set; }
+    }
+}
