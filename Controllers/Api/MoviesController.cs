@@ -5,7 +5,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using MovieApplication.Models;
 using MovieApplication.Dtos;
 using AutoMapper;
 using System.Data.Entity;

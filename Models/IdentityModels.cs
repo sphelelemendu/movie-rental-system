@@ -31,7 +31,7 @@ namespace MovieApplication.Models
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Rental> Rentals { get; set; }
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("ApplicationDbContext", throwIfV1Schema: false)
         {
         }
 
