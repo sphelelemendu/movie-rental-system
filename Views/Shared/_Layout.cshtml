@@ -9,7 +9,7 @@
     @RenderSection("my", required: false)
 
 </head>
-<body>
+<body id="particles-js" style="height: 100%; background-color: black">
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -31,14 +31,15 @@
             </div>
         </div>
     </div>
-    <div class="container body-content ">
+    <div class="container body-content mt-5">
         @RenderBody()
         <hr />
-        <div id="particles-js" style="height: 100%; background-color: black " class="mb-4" ></div>
+        <!--<div id="particles-js" style="height: 100%; background-color: black" class="mb-4"></div>-->
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
+
 
     @Scripts.Render("~/bundles/lib")
     @RenderSection("my", required: false)

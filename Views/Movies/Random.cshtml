@@ -5,20 +5,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@Html.ActionLink("New Movie", "New", "Movies", null, null)
-<table id="movies" class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <th><h3>Customers</h3></th>
-            <th><h3>Membership Type</h3></th>
-            <th><h3>Delete</h3></th>
-        </tr>
 
-    </thead>
-    <tbody>
-    </tbody>
+<div class="row">
+    <div class="col-md-12 mb-4">
+        @Html.ActionLink("New Movie", "New", "Movies", null, new { @class = "btn btn-primary mt-5", @Styles="margin-bottom:10px" })
+    </div>
+    <div class="col-md-12">
+        <table id="movies" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th><h3>Customers</h3></th>
+                    <th><h3>Membership Type</h3></th>
+                    <th><h3>Delete</h3></th>
+                </tr>
 
-</table>
+            </thead>
+            <tbody></tbody>
+
+        </table>
+    </div>
+</div>
+
+
 @section scripts
 
 {
