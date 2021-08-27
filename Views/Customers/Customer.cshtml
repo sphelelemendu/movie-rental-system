@@ -5,21 +5,29 @@
 }
 
 
+<div class="card-body p-4">
+    <div class="mb-4"></div>
+    <div class="form-group my-5 p-2">
+        @Html.ActionLink("New Customer", "NewCustomer", "Customers", null, new { @class = "btn btn-primary mt-5" })
+    </div>
+    <div class="form-group">
+        <table id="customers" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th><h3>Customers</h3></th>
+                    <th><h3>Membership Type</h3></th>
+                    <th><h3>Delete</h3></th>
+                </tr>
 
-@Html.ActionLink("New Customer", "NewCustomer", "Customers", null, null)
-<table id="customers" class="table table-bordered table-hover">
-    <thead>
-        <tr>
-            <th><h3>Customers</h3></th>
-            <th><h3>Membership Type</h3></th>
-            <th><h3>Delete</h3></th>
-        </tr>
+            </thead>
+            <tbody></tbody>
 
-    </thead>
-    <tbody>
-    </tbody>
+        </table>
+    </div>
+</div>
 
-</table>
+
+
 @section scripts
 
 {
