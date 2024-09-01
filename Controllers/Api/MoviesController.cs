@@ -16,6 +16,7 @@ namespace MovieApplication.Controllers.Api
 
         public MoviesController()
         {
+
             _context = new ApplicationDbContext();
         }
 
